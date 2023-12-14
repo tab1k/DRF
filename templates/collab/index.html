@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="author" content="Webpixels">
+  <title>Главная -> API</title>
+  <!-- Favicon -->
+  <link rel="icon" href="{% static 'collab/images/kenesary.jpg' %}" type="image/png">
+  <!-- Font Awesome 5 -->
+  <link rel="stylesheet" href="{% static 'collab/css/all.min.css' %}">
+  <link rel="stylesheet" href="{% static 'collab/css/fullcalendar.min.css' %}">
+  <!-- Purpose CSS -->
+  <link rel="stylesheet" href="{% static 'collab/css/purpose.css' %}" id="stylesheet">
+</head>
+
+<body class="application application-offset sidenav-pinned ready">
+ 
+  <div class="container-fluid container-application">
+    <!-- Sidenav -->
+    <div id="" class="sidenav show" style="width: 100%;">
+      <!-- Sidenav header -->
+      <div class="sidenav-header d-flex align-items-center">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/img/brand/white.png" class="navbar-brand-img" alt="...">
+        </a>
+        
+      </div>
+      <!-- User mini profile -->
+      <div class="sidenav-user d-flex flex-column align-items-center justify-content-between text-center">
+        <!-- Avatar -->
+        <div>
+          <a href="https://www.instagram.com/tab1k.k/" class="avatar rounded-circle avatar-xl">
+            <img alt="Image placeholder" src="{% static 'collab/images/kenesary.jpg' %}" class="">
+          </a>
+          <div class="mt-4">
+            <a href="https://www.instagram.com/tab1k.k/" class="btn btn-sm btn-white btn-icon rounded-pill shadow hover-translate-y-n3">
+              <span class="btn-inner--icon"><i class="fab fa-instagram"></i></span>
+              <span class="btn-inner--text">tab1k.k</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Application nav -->
+      <div class="nav-application clearfix">
+        <a href="/" class="btn btn-square text-sm active">
+          <span class="btn-inner--icon d-block"><i class="far fa-home fa-2x"></i></span>
+          <span class="btn-inner--icon d-block pt-2">Главная</span>
+        </a>
+        <a href="{% url 'blog:post-list' %}" class="btn btn-square text-sm">
+          <span class="btn-inner--icon d-block"><i class="far fa-tasks fa-2x"></i></span>
+          <span class="btn-inner--icon d-block pt-2">Blog API</span>
+        </a>
+        <a href="{% url 'blog:post-detail' pk=1 %}" class="btn btn-square text-sm">
+          <span class="btn-inner--icon d-block"><i class="far fa-columns fa-2x"></i></span>
+          <span class="btn-inner--icon d-block pt-2">Detail API</span>
+        </a>
+        <a href="{% url 'user-view' %}" class="btn btn-square text-sm">
+          <span class="btn-inner--icon d-block"><i class="far fa-users-cog fa-2x"></i></span>
+          <span class="btn-inner--icon d-block pt-2">Users</span>
+        </a>
+      </div>
+
+    </div>
+    
+    
+  </div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-104437451-1');
+  </script>
+
+</body>
+</html>
